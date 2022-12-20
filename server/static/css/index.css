@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #1C1F23;
+    --secondary-color:  #F9F9FC;
+}
+
+.services-icon{
+    font-size: 40px;
+}
+
+/* .service-heading{
+    font-weight: 600;
+} */
+
+.services-p{
+    color: grey;
+}
+
+.mechanic-icon{
+    font-size: 45px;
+    color: grey;
+}
+
+/* Services offered section start  */
+.service-component{
+    background-color: var(--primary-color);
+}
+
+.services-offedIcons{
+    font-size: 30px;
+    color: white;
+}
+
+.offered-h6{
+    color: white;
+    /* font-weight: 700; */
+}
+
+.viewService-icon{
+    font-size: 20px;
+}
+
+
+element.style {
+    visibility: visible;
+}
+.offcanvas.show {
+    transform: none;
+}
+
+.offcanvas-bottom{
+    height: 80vh;
+}

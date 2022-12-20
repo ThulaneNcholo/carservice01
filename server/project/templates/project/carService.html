@@ -1,0 +1,306 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="safearea">
+
+
+<!-- back button start  -->
+<section class="container">
+    <div class="row">
+        <div class="col-3 ">
+            <a href="{% url 'car-info'%}">
+                <i class="bi bi-arrow-left-square-fill back-button text-black" style="font-size: 28px;"></i>
+            </a>
+        </div>
+        <div class="col d-flex align-items-center">
+            <h5 class="mb-0">Select Service</h5>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Image start  -->
+<section class="container mt-5">
+    <center>
+        <img src="{% static 'images/service1.svg'%}" alt="" style="height: 180px; width: auto; object-fit: contain;">
+    </center>
+</section>
+
+<!-- Service List start  -->
+<section class="container mt-5">
+
+    <!-- Service Component start  -->
+    <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;">
+        <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+            <div class="col text-black">
+                Car Service
+            </div>
+            <div class="col-2 text-black">
+                <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+            </div>
+        </div>
+    </a>
+
+    <!-- modal Start  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Select Location</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Search location Component start  -->
+                    <section>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control py-3" placeholder="Benoni"
+                                    id="locationSearch" aria-describedby="locationhelp" name="locationSearch">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-dark py-3" style="width: 100%;">Search</button>
+                            </div>
+                        </div>
+                        <div id="locationhelp" class="form-text">
+                            Search for location you wish to be assisted at.
+                        </div>
+                    </section>
+
+                    <!-- locations list start  -->
+                    <section class="mt-4 mb-5">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item py-3">
+                                <a href="{% url 'autoshops-list' %}">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i class="bi bi-geo-alt-fill text-black"></i>
+                                        </div>
+                                        <div class="col text-black">
+                                            Brakpan
+                                        </div>
+                                        <div class="col-2">
+                                            <i class="bi bi-chevron-right text-black"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="list-group-item py-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <div class="col">
+                                        Benoni
+                                    </div>
+                                    <div class="col-2">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item py-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <div class="col">
+                                        Boksburg
+                                    </div>
+                                    <div class="col-2">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item py-3">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                    </div>
+                                    <div class="col">
+                                        Springs
+                                    </div>
+                                    <div class="col-2">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            AC & Repair
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Battery Service
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Brake & Clutch
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Basic Maintenance
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Computer Diagnostic
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Gear Repair
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Tyres & Wheel Care
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Engine Maintenance
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Overheating issues
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Denting & Painting
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Detailing Services
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Car Inspections
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Lights
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Steering
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Suspension
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Oil and Filter
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            AC & Repair
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+    <div class="row border shadow-sm mx-0 p-3 rounded mb-3">
+        <div class="col">
+            Windsheild & Glassess
+        </div>
+        <div class="col-2">
+            <i class="bi bi-arrow-right-square-fill" style="font-size: 20px;"></i>
+        </div>
+    </div>
+
+</section>
+
+</section>
+
+
+{% endblock %}

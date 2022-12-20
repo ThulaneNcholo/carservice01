@@ -1,0 +1,265 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .date-style{
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+</style>
+
+<section class="safearea">
+
+<!-- back button start  -->
+<section class="container">
+    <div class="row">
+        <div class="col-3 ">
+            <a href="{% url 'service-list'%}">
+                <i class="bi bi-arrow-left-square-fill back-button text-black" style="font-size: 28px;"></i>
+            </a>
+        </div>
+        <div class="col d-flex align-items-center">
+            <h5 class="mb-0">Auto Shops</h5>
+        </div>
+    </div>
+</section>
+
+<!-- Select Service Start  -->
+<section class="container mt-5">
+    <div class="alert alert-secondary border" role="alert">
+        <div class="row">
+            <div class="col">
+                Client Service :
+            </div>
+            <div class="col">
+                Brake & Clutch
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Change Location Component start  -->
+<section class="container mt-4">
+    <select class="form-select py-3 bg-light" aria-label="change service location">
+        <option>Change Service Location</option>
+        <option value="Brakpan">Brakpan</option>
+        <option value="Benoni">Benoni</option>
+        <option value="Boksburg">Boksburg</option>
+        <option value="Springs">Springs</option>
+    </select>
+</section>
+
+<!-- Auto shop list start  -->
+<section class="container mt-5">
+    <!-- autoshop card component  -->
+    <section class="border shadow-sm px-3 py-4 rounded mb-4">
+        <div class="row">
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-building" style="font-size: 30px;"></i>
+            </div>
+            <div class="col">
+                <h6 class="fw-bold">Company one</h6>
+                <p class="mb-2">12 lorem Street, Brakpan, 1541</p>
+                <p class="mb-2">Service Fee : <span class="fw-bold">R1200</span></p>
+                <p class="mb-2">7 Hours Repair</p>
+                <div class="row">
+                    <div class="col">
+                        3 <span> <i class="bi bi-star-fill text-warning"></i> </span>
+                    </div>
+                    <div class="col">
+                        58 Reviews
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Actions start  -->
+        <section class="mt-4">
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-dark py-3" style="width: 100%;" data-bs-toggle="modal" href="#BookService">Book Service</button>
+
+                    <!-- Book Service Application form start  -->
+                    <div class="modal fade" id="BookService" aria-hidden="true" aria-labelledby="BookServiceLabel" tabindex="-1">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="BookServiceLabel">Book Service Application</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5">
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <div class="mb-3">
+                                        <label for="FirstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="FirstName" aria-describedby="firstnamehelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" aria-describedby="lastNamehelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="contact" class="form-label">Contact Number</label>
+                                        <input type="number" class="form-control" id="contact" aria-describedby="contacthelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="altContact" class="form-label">Alternate Number</label>
+                                        <input type="text" class="form-control" id="altContact" aria-describedby="altContacthelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailhelp">
+                                    </div>
+                
+                                    <!-- Appointment Date start  -->
+                                    <label for="appointment" class="form-label">Appointment Date</label>
+                                    <div>
+                                        <input class="py-3 date-style" type="date" id="appointment" name="appointment">
+                                        <div id="appointmenthelp" class="form-text mt-2">Please select a date for your service.</div>
+                                    </div>
+                                </form>
+                                <!-- Submit Application btn -->
+                                <center>
+                                    <button class="btn btn-dark py-3 mt-5" style="width: 100%;" data-bs-target="#alerNotification" data-bs-toggle="modal">Submit Application</button>
+                                </center>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Alert Notification  -->
+                      <div class="modal fade" id="alerNotification" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalToggleLabel2"></h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5">
+                              <center>
+                                <i class="bi bi-check-circle-fill mb-4" style="font-size: 70px;"></i>
+                                <h5 class="mb-3">Service Successfully Booked</h5>
+                                <h6 class="text-secondary">
+                                    Please Kidnly wait for email confirmation from your service provider.
+                                </h6>
+                              </center>
+
+                              <!-- Application Rating Start  -->
+                              <section class="mt-5">
+                                <h5>Would you like to Rate our application ?</h5>
+                                <div class="row container mt-4">
+                                    <div class="col">
+                                        <i class="bi bi-star" style="font-size: 30px;"></i>
+                                    </div>
+                                    <div class="col">
+                                        <i class="bi bi-star" style="font-size: 30px;"></i>
+                                    </div>
+                                    <div class="col">
+                                        <i class="bi bi-star" style="font-size: 30px;"></i>
+                                    </div>
+                                    <div class="col">
+                                        <i class="bi bi-star" style="font-size: 30px;"></i>
+                                    </div>
+                                    <div class="col">
+                                        <i class="bi bi-star" style="font-size: 30px;"></i>
+                                    </div>
+                                </div>
+                              </section>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <a href="{% url 'company' %}">
+                        <button class="btn btn-outline-dark py-3" style="width: 100%;">View Company</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- autoshop card component  -->
+    <section class="border shadow-sm px-3 py-4 rounded mb-4">
+        <div class="row">
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-building" style="font-size: 30px;"></i>
+            </div>
+            <div class="col">
+                <h6 class="fw-bold">Company Two</h6>
+                <p class="mb-2">12 lorem Street, Brakpan, 1541</p>
+                <p class="mb-2">Service Fee : <span class="fw-bold">R1500</span></p>
+                <p class="mb-2">4 Hours Repair</p>
+                <div class="row">
+                    <div class="col">
+                        4.8 <span> <i class="bi bi-star-fill text-warning"></i> </span>
+                    </div>
+                    <div class="col">
+                        58 Reviews
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Actions start  -->
+        <section class="mt-4">
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-dark py-3" style="width: 100%;">Book Service</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-dark py-3" style="width: 100%;">View Business</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- autoshop card component  -->
+    <section class="border shadow-sm px-3 py-4 rounded mb-4">
+        <div class="row">
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-building" style="font-size: 30px;"></i>
+            </div>
+            <div class="col">
+                <h6 class="fw-bold">Company Three</h6>
+                <p class="mb-2">12 lorem Street, Brakpan, 1541</p>
+                <p class="mb-2">Service Fee : <span class="fw-bold">R100</span></p>
+                <p class="mb-2">3 Hours Repair</p>
+                <div class="row">
+                    <div class="col">
+                        5 <span> <i class="bi bi-star-fill text-warning"></i> </span>
+                    </div>
+                    <div class="col">
+                        58 Reviews
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Actions start  -->
+        <section class="mt-4">
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-dark py-3" style="width: 100%;">Book Service</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-dark py-3" style="width: 100%;">View Business</button>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>
+
+</section>
+{% endblock %}

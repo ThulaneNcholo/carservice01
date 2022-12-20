@@ -1,0 +1,49 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="safearea">
+
+<!-- back button start  -->
+<section class="container">
+    <div class="row">
+        <div class="col-3 ">
+            <a href="{% url 'Index'%}">
+                <i class="bi bi-arrow-left-square-fill back-button text-black" style="font-size: 28px;"></i>
+            </a>
+        </div>
+        <div class="col d-flex align-items-center">
+            <h5 class="mb-0">Find a Mechanic</h5>
+        </div>
+    </div>
+</section>
+
+<!-- hero-icon start  -->
+<section class="container mt-5">
+    <center>
+        <i class="bi bi-globe2" style="font-size: 70px;"></i>
+    </center>
+</section>
+
+<section class="container mt-3">
+    <center>
+        <h5 class="fw-bold mb-3" >Car Information</h5>
+        <h6 class="text-secondary">
+            Kindly let us know more information about your car so that we can assist you best.
+        </h6>
+    </center>
+</section>
+
+<!-- Actions start  -->
+<section class="container mt-5">
+    <center>
+        <a href="{% url 'car-info' %}">
+            <button class="btn btn-dark py-3 mb-4" style="width: 90%;">Get Started</button>
+        </a>
+        <button class="btn btn-outline-dark py-3 border-3" style="width: 90%;">Sign up Mechanic</button>
+    </center>
+</section>
+
+</section>
+
+{% endblock %}

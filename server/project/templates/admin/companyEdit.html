@@ -1,0 +1,47 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .company-image{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<!-- back button start  -->
+<section class="container" style="padding-top: 88px;">
+    <div class="row">
+        <div class="col-3 ">
+            <a role="button" onclick="history.back()">
+                <i class="bi bi-arrow-left-square-fill back-button text-black" style="font-size: 28px;"></i>
+            </a>
+        </div>
+        <div class="col d-flex align-items-center">
+            <h5 class="text-black mb-0">Company Profile</h5>
+        </div>
+    </div>
+</section>
+
+<!-- Content start  -->
+<section class="container mt-5">
+    <p>Edit Image</p>
+    <img class="company-image rounded" src="{% static 'images/shophero.jpg'%}" alt="">
+</section>
+
+<!-- About Section  -->
+<section class="container mt-5">
+    <p class="text-secondary">Edit Company Profile</p>
+    <h3 class="mb-4">A.B Mechanics</h3>
+    <p class="mb-2">12 lorem Street, Brakpan, 1550</p>
+    <p class="mb-2">011 647 8474</p>
+    <p>abmechanics@gmail.com</p>
+    <p class="mt-4 mb-2">12 lorem Street, Brakpan, 1550</p>
+    <p class="mb-2">011 647 8474</p>
+    <p class="mb-2">abmechanics@gmail.com</p>
+    <p class="mt-5">About</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit accusamus, ut laborum ullam excepturi repellendus maiores amet corrupti aliquid sunt facilis iste eaque voluptates quae porro. Cum asperiores sed quam!</p>
+</section>
+
+{% endblock %}

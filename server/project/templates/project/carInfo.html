@@ -1,0 +1,282 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="safearea">
+
+
+<!-- back button start  -->
+<section class="container">
+    <div class="row">
+        <div class="col-3 ">
+            <a href="{% url 'mechanic'%}">
+                <i class="bi bi-arrow-left-square-fill back-button text-black" style="font-size: 28px;"></i>
+            </a>
+        </div>
+        <div class="col d-flex align-items-center">
+            <h5 class="mb-0">Car Information</h5>
+        </div>
+    </div>
+</section>
+
+<!-- Car information form start  -->
+<section class="container mt-5">
+
+    <!-- Car make Component start -->
+    <div class="accordion mb-4">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#carMake" aria-expanded="false" aria-controls="carMake">
+                    Car Make
+                </button>
+            </h2>
+            <div id="carMake" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">Audi</label>
+                    </div>
+
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">BMW</label>
+                    </div>
+
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">Ford</label>
+                    </div>
+
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">Honda</label>
+                    </div>
+
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">Hyundai</label>
+                    </div>
+
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">Isuzu</label>
+                    </div>
+
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">Jeep</label>
+                    </div>
+
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">Mercedes-Benz</label>
+                    </div>
+
+                    <!-- Car make Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carMake" id="carMake">
+                        <label class="form-check-label" for="carMake">Volkswagen</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Model Component start -->
+    <div class="accordion mb-4">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#carModel" aria-expanded="false" aria-controls="carModel">
+                    Car Model
+                </button>
+            </h2>
+            <div id="carModel" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">1 Series</label>
+                    </div>
+
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">2 Series</label>
+                    </div>
+
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">3 Series</label>
+                    </div>
+
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">4 Series</label>
+                    </div>
+
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">5 Series</label>
+                    </div>
+
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">6 Series</label>
+                    </div>
+
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">M2</label>
+                    </div>
+
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">M3</label>
+                    </div>
+
+                    <!-- Car model Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="carModel" id="carModel">
+                        <label class="form-check-label" for="carMake">M4</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Year Component start -->
+    <div class="accordion mb-4">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#carYear" aria-expanded="false" aria-controls="carYear">
+                    Year
+                </button>
+            </h2>
+            <div id="carYear" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- Year Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Year" id="Year">
+                        <label class="form-check-label" for="carMake">2001</label>
+                    </div>
+
+                    <!-- Year Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Year" id="Year">
+                        <label class="form-check-label" for="Year">2002</label>
+                    </div>
+
+                    <!-- Year Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Year" id="Year">
+                        <label class="form-check-label" for="Year">2003</label>
+                    </div>
+
+                    <!-- Year Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Year" id="Year">
+                        <label class="form-check-label" for="Year">2004</label>
+                    </div>
+
+                    <!-- Year Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Year" id="Year">
+                        <label class="form-check-label" for="Year">2005</label>
+                    </div>
+
+                    <!-- Year Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Year" id="Year">
+                        <label class="form-check-label" for="Year">2006</label>
+                    </div>
+
+                    <!-- Year Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Year" id="Year">
+                        <label class="form-check-label" for="Year">2007</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Transmission Component start -->
+    <div class="accordion mb-4">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transmission" aria-expanded="false" aria-controls="transmission">
+                    Transmission
+                </button>
+            </h2>
+            <div id="transmission" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- Transmission Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Transmission" id="Transmission">
+                        <label class="form-check-label" for="Transmission">Automatic Car</label>
+                    </div>
+
+                    <!-- Transmission Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="Transmission" id="Transmission">
+                        <label class="form-check-label" for="Transmission">Manual Car</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fuel Type Component start -->
+    <div class="accordion mb-4">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fuelType" aria-expanded="false" aria-controls="fuelType">
+                    Fuel Type
+                </button>
+            </h2>
+            <div id="fuelType" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- fuelType Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="fuelType" id="fuelType">
+                        <label class="form-check-label" for="fuelType">Unleaded</label>
+                    </div>
+
+                    <!-- fuelType Radio buttons  -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="fuelType" id="fuelType">
+                        <label class="form-check-label" for="fuelType">Diesel</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit button  -->
+    <section class="container mt-5">
+        <center>
+            <a href="{% url 'service-list'%}">
+                <button class="btn btn-dark py-3" style="width: 90%;">Find Mechanic</button>
+            </a>
+        </center>
+    </section>
+
+</section>
+
+</section>
+
+{% endblock %}

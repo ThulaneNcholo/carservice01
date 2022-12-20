@@ -1,0 +1,112 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- back button start  -->
+<section class="container" style="padding-top: 88px;">
+    <div class="row">
+        <div class="col-3 ">
+            <a role="button" onclick="history.back()">
+                <i class="bi bi-arrow-left-square-fill back-button text-black" style="font-size: 28px;"></i>
+            </a>
+        </div>
+        <div class="col d-flex align-items-center">
+            <h5 class="text-black mb-0">My Services</h5>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row gy-5 mt-5">
+      <div class="col-6">
+        <a  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <div class="bg-black p-3 rounded card-shadow">
+                <center>
+                    <i class="bi bi-wrench-adjustable-circle text-white mb-2" style="font-size: 33px;"></i>
+                    <p class="text-white mb-2">Brake & Clutch</p>
+                    <p class="text-white">in-progress</p>
+                </center>
+            </div>
+        </a>
+        <!-- offcanvas-start  -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">In-progres</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <center>
+                    <i class="bi bi-clock mb-5" style="font-size: 55px;"></i>
+                </center>
+                <p class="mb-2 mt-5">Service</p>
+                <h6 class="mb-5 fw-bold">Brake & Clutch</h6>
+                <p class="mb-2">Company</p>
+                <h6 class="mb-5 fw-bold">A.B Mechanics</h6>
+                <p class="mb-2">Hours</p>
+                <h6 class="mb-5 fw-bold">6 Hours</h6>
+                <p class="mb-2">Service Fee</p>
+                <h6 class="mb-5 fw-bold">R1 500</h6>
+              <section>
+                <center>
+                    <button class="btn text-white mb-3 py-3" style="background-color: black; color: white; width: 100%;">Company</button>
+                    <button type="button" class="btn btn-outline-dark py-3" style="width: 100%; color: black !important;">Delete Service</button>
+                </center>
+              </section>
+            </div>
+          </div>
+      </div>
+      <div class="col-6">
+        <a data-bs-toggle="offcanvas" href="#completeOffcanvas" role="button" aria-controls="completeOffcanvas">
+            <div class="bg-white p-3 rounded card-shadow">
+                <center>
+                    <i class="bi bi-wrench-adjustable-circle text-black mb-2" style="font-size: 33px;"></i>
+                    <p class="text-black mb-2">Tyres & Wheel Care</p>
+                    <p class="text-black">Complete</p>
+                </center>
+            </div>
+        </a>
+
+        <!-- Complete Offcanvas start  -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="completeOffcanvas" aria-labelledby="completeOffcanvasLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="completeOffcanvasLabel">Complete Service</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <center>
+                    <i class="bi bi-check-circle-fill mb-5" style="font-size: 55px;"></i>
+                </center>
+                <p class="mb-2 mt-5">Service</p>
+                <h6 class="mb-5 fw-bold">Brake & Clutch</h6>
+                <p class="mb-2">Company</p>
+                <h6 class="mb-5 fw-bold">A.B Mechanics</h6>
+                <p class="mb-2">Hours</p>
+                <h6 class="mb-5 fw-bold">6 Hours</h6>
+                <p class="mb-2">Service Fee</p>
+                <h6 class="mb-5 fw-bold">R1 500</h6>
+              <section>
+                <center>
+                    <button class="btn text-white mb-3 py-3" style="background-color: black; color: white; width: 100%;">Company</button>
+                    <button type="button" class="btn btn-outline-dark py-3 mb-3" style="width: 100%; color: black !important;">Delete Service</button>
+                    <button class="btn text-white mb-3 py-3" style="background-color: black; color: white; width: 100%;">Rate Our Service</button>
+                </center>
+              </section>
+
+              <!-- Rate Service  -->
+              <section class="mt-5">
+                <p>Would you like to Rate our service ?</p>
+                <div class="d-flex justify-content-center">
+                    <div><i class="bi bi-star px-2" style="font-size: 25px;"></i></div>
+                    <div><i class="bi bi-star px-2" style="font-size: 25px;"></i></div>
+                    <div><i class="bi bi-star px-2" style="font-size: 25px;"></i></div>
+                    <div><i class="bi bi-star px-2" style="font-size: 25px;"></i></div>
+                    <div><i class="bi bi-star px-2" style="font-size: 25px;"></i></div>
+                </div>
+              </section>
+              <div style="height: 200px; width: 100%;"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

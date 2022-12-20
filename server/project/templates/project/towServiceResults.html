@@ -1,0 +1,156 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .page-radius{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .avatar {
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: lightgray;
+    }
+</style>
+
+
+    <!-- back button start  -->
+    <section class="container" style="padding-top: 88px;">
+        <div class="row">
+            <div class="col-3 ">
+                <a href="{% url 'tow-service'%}">
+                    <i class="bi bi-arrow-left-square-fill back-button text-black" style="font-size: 28px;"></i>
+                </a>
+            </div>
+            <div class="col d-flex align-items-center">
+                <h5 class="text-black mb-0">Available Tow Trucks</h5>
+            </div>
+        </div>
+    </section>
+<section class="bg-white pt-3 page-radius">
+    <!-- List Tow Trucks start  -->
+    <section class="container mt-5">
+        <!-- Service Card  -->
+        <div class="position-relative mt-5" style="width: 90%;">
+            <div class="row mt-4 card-shadow bg-white p-2 rounded mx-0">
+                <div class="col-3 d-flex align-items-center">
+                    <img class="avatar" src="{% static 'images/tow1.jpg'%}" alt="">
+                </div>
+                <div class="col">
+                    <p class="mb-0">RHE Towing Service</p>
+                    <div class="row">
+                        <div class="col text-secondary">
+                            Fee : <span>R2 500</span>
+                        </div>
+                        <div class="col">
+                            3 <span><i class="bi bi-star-fill text-warning px-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- verification icon  -->
+            <span class="position-absolute top-0 start-100 translate-middle">
+                <i class="bi bi-patch-check-fill" style="font-size: 30px; color: #019EEB;"></i>
+            </span>
+        </div>
+        <!-- Service Card  -->
+        <div class="position-relative mt-3" style="width: 90%;">
+            <div class="row mt-4 card-shadow bg-white p-2 rounded mx-0">
+                <div class="col-3 d-flex align-items-center">
+                    <img class="avatar" src="{% static 'images/tow2.jpg'%}" alt="">
+                </div>
+                <div class="col">
+                    <p class="mb-0">Lorem Towing Service</p>
+                    <div class="row">
+                        <div class="col text-secondary">
+                            Fee : <span>R3 300</span>
+                        </div>
+                        <div class="col">
+                            5 <span><i class="bi bi-star-fill text-warning px-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- verification icon  -->
+            <span class="position-absolute top-0 start-100 translate-middle">
+                <i class="bi bi-patch-check-fill" style="font-size: 30px; color: #019EEB;"></i>
+            </span>
+        </div>
+        <!-- Service Card  -->
+        <div class="position-relative mt-3" style="width: 90%;">
+            <div class="row mt-4 card-shadow bg-white p-2 rounded mx-0">
+                <div class="col-3 d-flex align-items-center">
+                    <img class="avatar" src="{% static 'images/towservice3.jpg'%}" alt="">
+                </div>
+                <div class="col">
+                    <p class="mb-0">Company 3 Towing Service</p>
+                    <div class="row">
+                        <div class="col text-secondary">
+                            Fee : <span>R3 000</span>
+                        </div>
+                        <div class="col">
+                            3.5 <span><i class="bi bi-star-fill text-warning px-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- verification icon  -->
+            <span class="position-absolute top-0 start-100 translate-middle">
+                <i class="bi bi-patch-check-fill" style="font-size: 30px; color: #019EEB;"></i>
+            </span>
+        </div>
+        <!-- Service Card  -->
+        <div class="position-relative mt-3" style="width: 90%;">
+            <div class="row mt-4 card-shadow bg-white p-2 rounded mx-0">
+                <div class="col-3 d-flex align-items-center">
+                    <img class="avatar" src="{% static 'images/tow4.jpg'%}" alt="">
+                </div>
+                <div class="col">
+                    <p class="mb-0">Company 4 Service</p>
+                    <div class="row">
+                        <div class="col text-secondary">
+                            Fee : <span>R2 000</span>
+                        </div>
+                        <div class="col">
+                            2.3 <span><i class="bi bi-star-fill text-warning px-1"></i></span>
+                        </div>
+                    </div>z
+                </div>
+            </div>
+            <!-- verification icon  -->
+            <span class="position-absolute top-0 start-100 translate-middle">
+                <i class="bi bi-patch-check-fill" style="font-size: 30px; color: #019EEB;"></i>
+            </span>
+        </div>
+        <!-- Service Card  -->
+        <div class="position-relative mt-3" style="width: 90%;">
+            <div class="row mt-4 card-shadow bg-white p-2 rounded mx-0">
+                <div class="col-3 d-flex align-items-center">
+                    <img class="avatar" src="{% static 'images/tow5.jpg'%}" alt="">
+                </div>
+                <div class="col">
+                    <p class="mb-0">Company 5 Service</p>
+                    <div class="row">
+                        <div class="col text-secondary">
+                            Fee : <span>R4 890</span>
+                        </div>
+                        <div class="col">
+                            4.1 <span><i class="bi bi-star-fill text-warning px-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- verification icon  -->
+            <span class="position-absolute top-0 start-100 translate-middle">
+                <i class="bi bi-patch-check-fill" style="font-size: 30px; color: #019EEB;"></i>
+            </span>
+        </div>
+    </section>
+
+</section>
+{% endblock %}

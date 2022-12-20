@@ -1,0 +1,475 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    .service-newIcon{
+        font-size: 25px;
+        color: black;
+    }
+
+    .paid-promotionsImage{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+</style>
+<section class="safearea">
+<section >
+    <!-- hx-get="{% url 'Index'%}"  hx-trigger="every 1s" -->
+    <!-- Welcome Message start  -->
+    <section class="container">
+        <h1 class="fw-bold mb-3">Welcome.</h1>
+        <h3>Select Services</h3>
+    </section>
+
+
+    <!-- Paid Promotions  -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col">
+                Promotions
+            </div>
+            <div class="col d-flex align-items-end">
+                see all
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col">
+                <div>
+                    <img class="paid-promotionsImage rounded" src="{% static 'images/shophero.jpg'%}" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <img class="paid-promotionsImage rounded" src="{% static 'images/shophero.jpg'%}" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <img class="paid-promotionsImage rounded" src="{% static 'images/shophero.jpg'%}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Services start  -->
+    <section class="container mt-5">
+        <div class="row bg-white mx-0 border rounded p-3 mb-3 card-shadow">
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-search service-newIcon"></i>
+            </div>
+            <div class="col">
+                <a href="{% url 'mechanic' %}">
+                    <p class="text-black mb-0" style="font-size: 20px;">Mechanic</p>
+                    <P class="services-p mb-0">Find a mechanic or make money working as a mechanic.</P>
+                </a>
+            </div>
+        </div>
+        <div class="row bg-white mx-0 border rounded p-3 mb-3 card-shadow">
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-box-seam service-newIcon"></i>
+            </div>
+            <div class="col">
+                <p class="text-black mb-0" style="font-size: 20px;">Spare parts</p>
+                <P class="services-p mb-0">Buy spare parts and car accessories and car fluids.</P>
+            </div>
+        </div>
+        <div class="row bg-black mx-0 border border-dark rounded p-3 mb-3 card-shadow">
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-geo-alt-fill service-newIcon text-white"></i>
+            </div>
+            <div class="col">
+                <a href="{% url 'tow-service'%}">
+                    <p class="text-white mb-0" style="font-size: 20px;">Tow Truck Service</p>
+                    <P class="services-p text-white mb-0">Find nearby tow truck service</P>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Mechanics Start  -->
+    <section class="container mt-5">
+        <div class="row mb-4">
+            <div class="col">
+                <h6 class="fw-bold">Find a Mechanic</h6>
+            </div>
+            <div class="col-3">
+                see all
+            </div>
+        </div>
+
+        <section class="">
+            <div class="overflow-hidden">
+                <div class="row gy-5">
+                  <div class="col-sm-12 col-md-6">
+                    <div>
+                        <div class="card card-shadow">
+                            <img src="{% static 'images/shophero.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">A.B Mechanics</h5>
+                              <div class="row">
+                                <div class="col">
+                                    <p>Benoni</p>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            4.8 <span class="mx-2"><i class="bi bi-star-fill text-warning"></i></span>
+                                        </div>
+                                        <div class="col">
+                                            102 <span class="mx-2"><i class="bi bi-chat-left-text-fill"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus perferendis sapiente fugiat. Molestias, animi iusto accusantium ipsa eveniet autem magni!</p>
+                              <a href="#" class="btn text-white" style="background-color: black;">View Company</a>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div>
+                        <div class="card card-shadow">
+                            <img src="{% static 'images/tow3.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">A.B Mechanics</h5>
+                              <div class="row">
+                                <div class="col">
+                                    <p>Benoni</p>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            4.8 <span class="mx-2"><i class="bi bi-star-fill text-warning"></i></span>
+                                        </div>
+                                        <div class="col">
+                                            102 <span class="mx-2"><i class="bi bi-chat-left-text-fill"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus perferendis sapiente fugiat. Molestias, animi iusto accusantium ipsa eveniet autem magni!</p>
+                              <a href="#" class="btn text-white" style="background-color: black;">View Company</a>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div>
+                        <div class="card card-shadow">
+                            <img src="{% static 'images/tow3.jpg'%}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">A.B Mechanics</h5>
+                              <div class="row">
+                                <div class="col">
+                                    <p>Benoni</p>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            4.8 <span class="mx-2"><i class="bi bi-star-fill text-warning"></i></span>
+                                        </div>
+                                        <div class="col">
+                                            102 <span class="mx-2"><i class="bi bi-chat-left-text-fill"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus perferendis sapiente fugiat. Molestias, animi iusto accusantium ipsa eveniet autem magni!</p>
+                              <a href="#" class="btn text-white" style="background-color: black;">View Company</a>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+    <!-- Services Offered start  -->
+    <section class="container mt-5">
+        <div class="row mb-4">
+            <div class="col">
+                <h6 class="fw-bold">Services offered</h6>
+            </div>
+            <div class="col-3">
+                <a role="button" class="text-black" data-bs-toggle="offcanvas"data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    see all
+                </a>
+
+                <!-- see all offcanvas start  -->
+                <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Services Offered</h5>
+                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <section>
+                        <div class="row gy-3">
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Find nearby tow truck</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Car starting inspection</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Periodic service</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Brake pads replacements</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Over heating engine</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Tyre & Wheel Care</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">AC & Repair</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Batteries</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Denting & Painting</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Detailing</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Car Inspection</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Windshield,Glasses & Lights</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Suspension & Fitments</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="p-3 bg-light border rounded border bg-light">
+                                    <center>
+                                        <i class="bi bi-gear-wide-connected services-offedIcons text-dark"></i>
+                                        <h6 class="my-3 text-dark">Clutch & Body Parts</h6>
+                                        <button class="btn btn-dark" style="width: 100%;">
+                                            select
+                                        </button>
+                                    </center>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                      </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- services component start  -->
+        <div class="row mx-0 service-component p-3 rounded mb-3 bg-black">
+            <div class="col-3">
+                <!-- <i class="bi bi-wrench-adjustable-circle"></i> -->
+                <i class="bi bi-wrench-adjustable-circle services-offedIcons"></i>
+            </div>
+            <div class="col d-flex align-items-center">
+                <p class="text-white mb-0">Find nearby tow truck</p>
+                <!-- <p class="offered-h6">Find nearby tow truck</p> -->
+            </div>
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-arrow-right-square-fill text-white viewService-icon"></i>
+            </div>
+        </div>
+
+        <div class="row mx-0 service-component p-3 rounded mb-3 bg-black">
+            <div class="col-3">
+                <i class="bi bi-wrench-adjustable-circle services-offedIcons"></i>
+            </div>
+            <div class="col d-flex align-items-center">
+                <p class="text-white mb-0">Car starting inspection</p>
+            </div>
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-arrow-right-square-fill text-white viewService-icon"></i>
+            </div>
+        </div>
+
+        <div class="row mx-0 service-component p-3 rounded mb-3 bg-black">
+            <div class="col-3">
+                <i class="bi bi-wrench-adjustable-circle services-offedIcons"></i>
+            </div>
+            <div class="col d-flex align-items-center">
+                <p class="text-white mb-0">Periodic service</p>
+            </div>
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-arrow-right-square-fill text-white viewService-icon"></i>
+            </div>
+        </div>
+
+        <div class="row mx-0 service-component p-3 rounded mb-3 bg-black">
+            <div class="col-3">
+                <i class="bi bi-wrench-adjustable-circle services-offedIcons"></i>
+            </div>
+            <div class="col d-flex align-items-center">
+                <p class="text-white mb-0">Brake pads replacements</p>
+            </div>
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-arrow-right-square-fill text-white viewService-icon"></i>
+            </div>
+        </div>
+
+        <div class="row mx-0 service-component p-3 rounded mb-3 bg-black">
+            <div class="col-3">
+                <i class="bi bi-wrench-adjustable-circle services-offedIcons"></i>
+            </div>
+            <div class="col d-flex align-items-center">
+                <p class="text-white mb-0">Over heating engine</p>
+            </div>
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-arrow-right-square-fill text-white viewService-icon"></i>
+            </div>
+        </div>
+
+        <div class="row mx-0 service-component p-3 rounded mb-3 bg-black">
+            <div class="col-3">
+                <i class="bi bi-wrench-adjustable-circle services-offedIcons"></i>
+            </div>
+            <div class="col d-flex align-items-center">
+                <p class="text-white mb-0">Tyre & Wheel Care</p>
+            </div>
+            <div class="col-2 d-flex align-items-center">
+                <i class="bi bi-arrow-right-square-fill text-white viewService-icon"></i>
+            </div>
+        </div>
+    </section>
+
+
+</section>
+
+</section>
+{% endblock %}

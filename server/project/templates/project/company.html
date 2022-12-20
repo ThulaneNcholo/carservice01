@@ -1,0 +1,430 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .safe-area-bottom{
+        padding-bottom: 44px;
+    }
+
+    .hero-image{
+        height: 300px;
+        width: auto;
+        background-size: cover;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("/static/images/shophero.jpg");
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+
+    .verify-icon{
+        color: #019EEB;
+        font-size: 50px;
+    }
+
+    .card-shadow{
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+    .divider{
+        background-color: lightgray;
+        height: 3px;
+        width: 23%;
+    }
+
+    .rating-icon{
+        font-size: 40px;
+        color: #FFC600;
+    }
+
+    .clear-ratings-icon{
+        font-size: 40px;
+    }
+
+    .offcanvas-height{
+        height: 70vh !important;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+
+    .close-component{
+        height: 5px;
+        width: 15%;
+        background-color: lightgray;
+    }
+    
+</style>
+<section class="safe-area-bottom">
+
+    <!-- Company Hero Image start  -->
+    <section class="safe-area-disable">
+        <div class="hero-image">
+            <!-- back button start  -->
+            <section class="container" style="padding-top: 88px;">
+                <a role="button" onclick="history.back()">
+                    <i class="bi bi-arrow-left-square-fill back-button text-white" style="font-size: 28px;"></i>
+                </a>
+            </section>
+        </div>
+    </section>
+
+    <!-- Company Content start  -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <p class="text-secondary mb-1" style="font-size: 14px;">Company Profile</p>
+                <h6 class="fw-bold" style="font-size: 27px;">A.B Mechanics</h6>
+                <p class="text-secondary mb-1" style="font-size: 14px;">12 Lorem Street, Brakpan, 1540</p>
+            </div>
+            <div class="col-3 d-flex align-items-center">
+                <i class="bi bi-patch-check-fill verify-icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company  -->
+    <section class="container mt-5">
+        <h6 class="fw-bold">About Company</h6>
+        <p class="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quibusdam magnam, a architecto hic accusantium sapiente voluptas porro harum quisquam voluptates nihil dolorum facere doloremque. Rem odio possimus reprehenderit sed.</p>
+    </section>
+
+    <section class="container mt-5">
+        <div class="row gx-3">
+
+            <div class="col">
+                <a role="button" data-bs-toggle="offcanvas" data-bs-target="#servicelist" aria-controls="servicelist">
+                    <div class="px-2 py-4 rounded card-shadow">
+                        <center>
+                            <i class="bi bi-gear-wide-connected  bg-dark text-white rounded-circle" style="font-size: 20px; padding: 14px;"></i>
+                            <p class="text-secondary mt-4 mb-0" style="font-size: 14px;">Services</p>
+                        </center>
+                    </div>
+                </a>
+
+                <!-- Services Offcanvas start  -->
+                <div class="offcanvas offcanvas-bottom offcanvas-height" tabindex="-1" id="servicelist" aria-labelledby="servicelistLabel">
+                    <div class="offcanvas-body">
+                        <!-- Close button  -->
+                        <center>
+                            <a role="button" data-bs-dismiss="offcanvas">
+                                <div class="close-component rounded mt-3"></div>
+                            </a>
+                        </center>
+
+                        <!-- Service List start  -->
+                        <div class="mt-5">
+                            <div class="row gy-4">
+                                <div class="col-6">
+                                    <div class="p-3 border border-2 rounded border-dark card-shadow">
+                                        Battery Service
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 border border-2 rounded border-dark card-shadow">
+                                        Brake & Clutch
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 border border-2 rounded border-dark card-shadow">
+                                        Maintenance
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 border border-2 rounded border-dark card-shadow">
+                                        Gear Repair
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <a role="button" data-bs-toggle="offcanvas" data-bs-target="#reviewsoffcanvas" aria-controls="reviewsoffcanvas">
+                    <div class="px-2 py-4  rounded card-shadow">
+                        <center>
+                            <i class="bi bi-chat-left bg-secondary text-white rounded-circle" style="font-size: 20px; padding: 14px;"></i>
+                            <p class="text-secondary mt-4 mb-0" style="font-size: 14px;">Reviews</p>
+                        </center>
+                    </div>
+                </a>
+                
+                <!-- Reviews Offcanvas Start  -->
+                <div class="offcanvas offcanvas-bottom offcanvas-height" tabindex="-1" id="reviewsoffcanvas" aria-labelledby="reviewsoffcanvasLabel">
+                    <div class="offcanvas-body">
+                        <!-- Close button  -->
+                        <center>
+                            <a role="button" data-bs-dismiss="offcanvas">
+                                <div class="close-component rounded mt-3"></div>
+                            </a>
+                        </center>
+
+                        <!-- Add Review Action start  -->
+                        <section class="my-5">
+                            <button class="btn btn-dark py-3 card-shadow" style="width: 100%;">Add a Review</button>
+                        </section>
+
+                        <!-- Review Component  -->
+                        <div class="mb-5">
+                            <div class="row">
+                                <div class="col-2 d-flex align-items-center">
+                                    <i class="bi bi-person-circle" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex justify-content-start">
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                    </div>
+                                    <p>John Doe</p>
+                                </div>
+                            </div>
+                            <p class="text-secondary">They are really good at Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus error, cum perferendis harum odio alias distinctio sapiente officiis odit debitis voluptatum eveniet voluptatem iure quos, corporis temporibus quas, in sint!</p>
+                            <div class="d-flex justify-content-end">
+                                <div><i class="bi bi-calendar-check-fill px-2"></i> <span>20 Aug 2022</span></div>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <div class="row">
+                                <div class="col-2 d-flex align-items-center">
+                                    <i class="bi bi-person-circle" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex justify-content-start">
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                    </div>
+                                    <p>John Doe</p>
+                                </div>
+                            </div>
+                            <p class="text-secondary">They are really good at Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus error, cum perferendis harum odio alias distinctio sapiente officiis odit debitis voluptatum eveniet voluptatem iure quos, corporis temporibus quas, in sint!</p>
+                            <div class="d-flex justify-content-end">
+                                <div><i class="bi bi-calendar-check-fill px-2"></i> <span>20 Aug 2022</span></div>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <div class="row">
+                                <div class="col-2 d-flex align-items-center">
+                                    <i class="bi bi-person-circle" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex justify-content-start">
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                        <div><i class="bi bi-star-fill px-1 text-warning"></i></div>
+                                    </div>
+                                    <p>John Doe</p>
+                                </div>
+                            </div>
+                            <p class="text-secondary">They are really good at Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus error, cum perferendis harum odio alias distinctio sapiente officiis odit debitis voluptatum eveniet voluptatem iure quos, corporis temporibus quas, in sint!</p>
+                            <div class="d-flex justify-content-end">
+                                <div><i class="bi bi-calendar-check-fill px-2"></i> <span>20 Aug 2022</span></div>
+                            </div>
+                        </div>
+                        <!-- Bottom -->
+                        <div style="height: 100px; width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <a role="button" data-bs-toggle="offcanvas" data-bs-target="#contactdetails" aria-controls="contactdetails">
+                    <div class="px-2 py-4  rounded card-shadow">
+                        <center>
+                            <i class="bi bi-person-lines-fill bg-secondary text-white rounded-circle" style="font-size: 20px; padding: 14px;"></i>
+                            <p class="text-secondary mt-4 mb-0" style="font-size: 14px;">Contact</p>
+                        </center>
+                    </div>
+                </a>
+
+                <div class="offcanvas offcanvas-bottom offcanvas-height" tabindex="-1" id="contactdetails" aria-labelledby="contactdetailsLabel">
+                    <div class="offcanvas-body">
+                        <!-- Close button  -->
+                        <center>
+                            <a role="button" data-bs-dismiss="offcanvas">
+                                <div class="close-component rounded mt-3 mb-5"></div>
+                            </a>
+                        </center>
+
+                        <!-- AutoShop Card  -->
+                        <div class="mb-5">
+                            <p class="mb-2 fw-bold" style="font-size: 18px;">A.C Mechanics Workshop 1</p>
+                            <p class="mb-2 text-secondary">12 lorem Street, Brakpan, 1540</p>
+                            <div class="row mb-2">
+                                <div class="col-1">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="col text-bold">
+                                    000 0000 0000
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-1">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="col text-bold">
+                                    000 0000 0000
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-1">
+                                    <i class="bi bi-envelope-check-fill"></i>
+                                </div>
+                                <div class="col text-bold">
+                                    abmechanics@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AutoShop Card  -->
+                        <div class="mb-5">
+                            <p class="mb-2 fw-bold" style="font-size: 18px;">A.C Mechanics Workshop 2</p>
+                            <p class="mb-2 text-secondary">12 voortrekker Street, Benoni, 1750</p>
+                            <div class="row mb-2">
+                                <div class="col-1">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="col text-bold">
+                                    123 456 7890
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-1">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="col text-bold">
+                                    123 456 7890
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-1">
+                                    <i class="bi bi-envelope-check-fill"></i>
+                                </div>
+                                <div class="col text-bold">
+                                    abmechanics@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-12 mt-4">
+                <div class="px-2 py-4  rounded card-shadow">
+                    <a role="button" data-bs-toggle="offcanvas" data-bs-target="#carBrands" aria-controls="carBrands">
+                        <center>
+                            <i class="bi bi-bootstrap-fill bg-secondary text-white rounded-circle" style="font-size: 20px; padding: 14px;"></i>
+                            <p class="text-secondary mt-4 mb-0" style="font-size: 14px;">Brands</p>
+                        </center>
+                    </a>
+                    
+                    <!-- Car Brands Start  -->
+                    <div class="offcanvas offcanvas-bottom offcanvas-height" tabindex="-1" id="carBrands" aria-labelledby="carBrandsLabel">
+                        <div class="offcanvas-body">
+                            <!-- Close button  -->
+                            <center>
+                                <a role="button" data-bs-dismiss="offcanvas">
+                                    <div class="close-component rounded mt-3 mb-5"></div>
+                                </a>
+                            </center>
+
+                            <!-- Brands Cards start  -->
+                            <div class="container">
+                                <div class="row gy-3">
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <i class="bi bi-bootstrap-fill" style="font-size: 20px;"></i>
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                Toyota
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <i class="bi bi-bootstrap-fill" style="font-size: 20px;"></i>
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                Hyundai
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <i class="bi bi-bootstrap-fill" style="font-size: 20px;"></i>
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                Land Rover
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <i class="bi bi-bootstrap-fill" style="font-size: 20px;"></i>
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                BMW
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Divider start  -->
+    <center>
+        <div class="divider rounded mt-4"></div>
+    </center>
+
+    <!-- Actions start  -->
+    <Section class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-dark py-3 card-shadow" style="width: 100%;">Book Service</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-dark py-3 border-2 card-shadow" style="width: 100%;">Call Company</button>
+            </div>
+        </div>
+    </Section>
+
+    <!-- Ratings start  -->
+    <section class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <div>
+                <i class="bi bi-star-fill rating-icon px-2"></i>
+            </div>
+            <div>
+                <i class="bi bi-star-fill rating-icon px-2"></i>
+            </div>
+            <div>
+                <i class="bi bi-star-fill rating-icon px-2"></i>
+            </div>
+            <div>
+                <i class="bi bi-star px-2 clear-ratings-icon"></i>
+            </div>
+            <div>
+                <i class="bi bi-star px-2 clear-ratings-icon"></i>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+
+
+
+{% endblock %}

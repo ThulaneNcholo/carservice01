@@ -1,0 +1,233 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .container-style{
+        height: 100vh;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .main-bg{
+        background-color: black;
+    }
+</style>
+
+<section class="main-bg" style="height: 100vh;">
+    
+    <!-- back button start  -->
+    <section class="container" style="padding-top: 88px;">
+        <div class="row">
+            <div class="col-3 ">
+                <a href="{% url 'Index'%}">
+                    <i class="bi bi-arrow-left-square-fill back-button text-white" style="font-size: 28px;"></i>
+                </a>
+            </div>
+            <div class="col d-flex align-items-center">
+                <h5 class="text-white mb-0">Tow Truck Service</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="container container-style bg-white mt-5">
+
+        <!-- Address section start  -->
+        <section style="padding-top: 15%;">
+            <h6 class="fw-bold" style="font-size: 18px;">Address</h6>
+
+            <div class="row mt-4">
+                <div class="col-1">
+                    <i class="bi bi-backspace-reverse-fill"></i>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="pickup" class="form-label">Pickup Address</label>
+                        <input type="text" class="form-control py-3" id="pickup" aria-roledescription="pickuplocation" placeholder="12 lorem street, Benoni">
+                        <div id="pickuphelp" class="form-text text-dark mt-2">Please Enter your pick up location.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-1">
+                    <i class="bi bi-backspace-reverse-fill"></i>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="pickup" class="form-label">Drop-off Address</label>
+                        <input type="text" class="form-control py-3" id="pickup" aria-roledescription="pickuplocation" placeholder="3 lorem street, Bedfordview">
+                        <div id="pickuphelp" class="form-text text-dark mt-2">Drop off location.</div>
+                    </div>
+                </div>
+            </div>
+
+            <center>
+                <hr class="mt-5" style="width: 90%;">
+            </center>
+
+            <!-- More information start  -->
+            <section class="mt-5">
+                <h6 class="fw-bold" style="font-size: 18px;">More Information</h6>
+                
+                <div class="row mt-1">
+                    <div class="col-1 d-flex align-items-center">
+                        <i class="bi bi-arrow-right-square-fill"></i>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        Vehicle Type
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-dark card-shadow border-2" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#vehicleType">Browse</button>
+
+                        <!-- Vehicle types section start  -->
+                        <div class="modal fade" id="vehicleType" tabindex="-1" aria-labelledby="vehicleTypeLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="vehicletypleLabel">Vehicle Type</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Please Select your vehicle type ?</p>
+                                        <!-- Vehicle type options start  -->
+                                        <div class="row gy-3 mt-3">
+                                            <div class="col-6">
+                                                <div class="bg-light card-shadow p-3 rounded ">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                      Suv
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="bg-light card-shadow p-3 rounded ">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                      Hatchback
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="bg-light card-shadow p-3 rounded ">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                      Sedan
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="bg-light card-shadow p-3 rounded ">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                      Minivan
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="bg-light card-shadow p-3 rounded ">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                      Station Wagon
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="bg-light card-shadow p-3 rounded ">
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                      Pickup Truck
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <!-- Action button  -->
+                                            <center>
+                                                <button type="button" class="btn btn-dark my-5 py-3 card-shadow" style="width: 100%;">Continue</button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-1 d-flex align-items-center">
+                        <i class="bi bi-arrow-right-square-fill"></i>
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
+                        Schedule Time
+                    </div>
+                    <div class="col px-0">
+                        <a href="{% url 'tow-service-results' %}">
+                            <button class="btn btn-dark card-shadow" style="width: 100%;">now</button>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-light border card-shadow" data-bs-toggle="modal" data-bs-target="#pickupdate" class="btn btn-light border card-shadow" style="width: 100%;">
+                            <i class="bi bi-clock"></i>
+                        </button>
+
+                        <!-- Schedule pick up date  -->
+                        <div class="modal fade" id="pickupdate" tabindex="-1" aria-labelledby="pickupdateLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="pickuplabel">Pickup Schedule</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body pt-3">
+                                        <div class="mb-3">
+                                            <label for="pickupdate" class="form-label">Pick-up Date</label>
+                                            <input type="date" class="form-control py-3" id="pickupdate" aria-describedby="pickupdate">
+                                            <div class="form-text" id="pickuphelp">Please Select pick up date.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="pickupdate" class="form-label">Time</label>
+                                            <input type="time" class="form-control py-3" id="pickupdate" aria-describedby="picktime">
+                                            <div class="form-text" id="scheduletime">Please Select time of pickup.</div>
+                                        </div>
+
+                                        <!-- action button  -->
+                                        <center>
+                                            <button class="btn btn-dark py-3 my-5 card-shadow" style="width: 100%;">Continue</button>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions start  -->
+                <div class="row mt-5">
+                    <div class="col-2">
+                        <button class="btn btn-light border card-shadow">
+                            <i class="bi bi-arrow-left" style="font-size: 20px;"></i>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <a href="{% url 'tow-service-results' %}">
+                            <button class="btn btn-dark card-shadow" style="width: 100%; padding-top: 9px; padding-bottom: 9px;">Continue</button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</section>
+{% endblock %}

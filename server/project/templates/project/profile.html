@@ -1,0 +1,128 @@
+{% extends 'project/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+.avatar {
+  vertical-align: middle;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+</style>
+<!-- back button start  -->
+<section class="container" style="padding-top: 88px;">
+    <div class="row">
+        <div class="col-3 ">
+            <a role="button" onclick="history.back()">
+                <i class="bi bi-arrow-left-square-fill back-button text-black" style="font-size: 28px;"></i>
+            </a>
+        </div>
+        <div class="col d-flex align-items-center">
+            <h5 class="text-black mb-0">Profile</h5>
+        </div>
+    </div>
+</section>
+
+<!-- Profile hero-section  -->
+<section class="container mt-5">
+    <center>
+        <img class="avatar" src="{% static 'images/person-avatar.png'%}" alt="">
+        <h3 class="mt-2">Izaak Wise</h3>
+        <p class="text-secondary">izaak@gmail.com</p>
+    </center>
+</section>
+
+<!-- Profile call to actions start  -->
+<section class="container mt-5">
+
+    <!-- Offcanvas Item start  -->
+    <a class="text-black" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <div class="row mx-0 p-3">
+            <div class="col-3">
+                <i class="bi bi-person" style="font-size: 20px;"></i>
+            </div>
+            <div class="col d-flex align-items-center">
+                My Profile
+            </div>
+        </div>
+    </a>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Edit Profile</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h3 class="mb-3">Basic Details</h3>
+            <form >
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control py-3" id="firstName" aria-describedby="firstNamehelp">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control py-3" id="lastName" aria-describedby="lastNamehelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control py-3" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <input type="number" class="form-control py-3" id="contactNumber" aria-describedby="contactNumberHelp">
+                </div>
+                <center>
+                    <button class="btn my-4 py-3 text-white card-shadow" style="width: 100%; background-color: black;">Update Profile</button>
+                </center>
+            </form>
+        </div>
+    </div> <!-- Offcanvas Item end  -->
+    
+    <div class="row mx-0 p-3">
+        <div class="col-3">
+            <i class="bi bi-gear" style="font-size: 20px;"></i>
+        </div>
+        <div class="col">
+            settings
+        </div>
+    </div>
+    <div class="row mx-0 p-3">
+        <div class="col-3">
+            <i class="bi bi-unlock" style="font-size: 20px;"></i>
+        </div>
+        <div class="col">
+            Reset Password
+        </div>
+    </div>
+    <div class="row mx-0 p-3">
+        <div class="col-3">
+            <i class="bi bi-exclamation-square" style="font-size: 20px;"></i>
+        </div>
+        <div class="col">
+            About app
+        </div>
+    </div>
+    <div class="row mx-0 p-3 bg-black" style="margin-top: 20px;">
+        <div class="col-3 text-white">
+            <i class="bi bi-box-arrow-right" style="font-size: 20px;"></i>
+        </div>
+        <div class="col text-white">
+            Logout
+        </div>
+    </div>
+    <a href="{% url 'dashboard' %}">
+        <div class="row mx-0 p-3 bg-black" style="margin-top: 20px;">
+            <div class="col-3 text-white">
+                <i class="bi bi-box-arrow-right" style="font-size: 20px;"></i>
+            </div>
+            <div class="col text-white">
+                Dashboard
+            </div>
+        </div>
+    </a>
+</section>
+{% endblock %}
